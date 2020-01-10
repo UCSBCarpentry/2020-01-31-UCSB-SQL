@@ -71,7 +71,7 @@ displayed if the 'eventbrite' field in the header is not set.
 
 
 
-<h2 id="general">Course Information</h2>
+<h2 id="general">Course Description</h2>
 In the late 1920s and early 1930s,
 William Dyer,
 Frank Pabodie,
