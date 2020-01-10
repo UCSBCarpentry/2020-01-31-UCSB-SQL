@@ -305,7 +305,6 @@ the div's with class="row" to balance the multi-column layout.
 This is one of the places where people frequently make mistakes, so
 please preview your site before committing, and make sure to run
 'tools/check' as well.
-{% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
 {% if site.carpentry == "swc" %}
@@ -317,6 +316,7 @@ please preview your site before committing, and make sure to run
 {% endif %}
 
 <hr/>
+{% endcomment %}
 
 {% comment %}
 SETUP
@@ -330,31 +330,23 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Setup/Prerequisites</h2>
 
-<p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
+<p>Software: install one of these.</p>
+<ul>
 
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% endif %}
+<li>For a database system you can access from the Unix shell, install
+<a href="http://www.sqlite.org/">SQLite3</a> if it is not already on
+your system.  (You can tell if SQLite3 is installed if the "sqlite3"
+command is in your path.)</li>
+
+<li>For a standalone graphical application, install <a
+href="http://sqlitebrowser.org/">DB Browser for SQLite</a>.</li>
+
+</ul>
+
+<p>Data:</p>
+<ul>
+<li>Please download the database we will use: <a href="files/survey.db">survey.db</a>.</li>
+</ul>
+
