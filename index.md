@@ -70,6 +70,37 @@ displayed if the 'eventbrite' field in the header is not set.
 {% endif %}
 
 
+
+<h2 id="general">Course Information</h2>
+In the late 1920s and early 1930s,
+William Dyer,
+Frank Pabodie,
+and Valentina Roerich led expeditions to the
+[Pole of Inaccessibility](https://en.wikipedia.org/wiki/Pole_of_inaccessibility)
+in the South Pacific,
+and then onward to Antarctica.
+Two years ago,
+their expeditions were found in a storage locker at Miskatonic University.
+Their data has been scanned and OCR'd,
+and we now want to store that information
+in a way that will make search and analysis easy.
+
+Three common options for storage are
+text files,
+spreadsheets,
+and databases.
+<ul>
+<li><i>Text files</i> are easiest to create,
+and work well with version control,
+but then we would have to build search and analysis tools ourselves.</li>
+<li><i>Spreadsheets</i> are good for doing simple analyses,
+but they don't handle large or complex data sets well.</li>
+</ul>
+<i><strong>Relational databases</strong></i>, however, include powerful tools for search and analysis,
+and can handle large, complex data sets.
+These lessons will show how to use a relational database and the SQL language to explore the expeditions' data.
+
+
 <h2 id="general">General Information</h2>
 
 {% comment %}
