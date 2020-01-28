@@ -335,10 +335,11 @@ please preview your site before committing, and make sure to run
 <p>Software: install one of these.</p>
 <ul>
 
-<li>For a database system you can access from the Unix shell, install
+<li>For a database system you can access from the Unix shell (Mac/Linux), install
 <a href="http://www.sqlite.org/">SQLite3</a> if it is not already on
 your system.  (You can tell if SQLite3 is installed if the "sqlite3"
-command is in your path.)</li>
+command is in your path.) Windows Users: follow these instructions to use SQLite from the command prompt (https://www.sqlitetutorial.net/download-install-sqlite/).
+</li>
 
 <li>For a standalone graphical application, install <a
 href="http://sqlitebrowser.org/">DB Browser for SQLite</a>.</li>
