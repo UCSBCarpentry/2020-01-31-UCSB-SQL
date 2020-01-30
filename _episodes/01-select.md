@@ -60,15 +60,15 @@ but that handful accounts for most of what scientists do.
 > ~~~
 > {: .bash}
 >
-> **Windows** To get into SQLite with the Windows command prompt either double-click your sqlite.exe file which will automatically open SQLite in 
-> the command prompt or open the command prompt, navigate to the folder where the .exe file is saved (cd) and use command 'sqlite3'. If 
-> you unzipped the SQLite download to a new folder called 'sqlite' on your C: drive per the instructions, use the following command:
+> **Windows** To get into SQLite with the Windows command prompt either double-
+> click your `sqlite3.exe` file which will automatically open SQLite in 
+> the command prompt or open the command prompt, navigate to the folder where the >`sqlite3.exe` file is saved using `cd` command and on the next line the `sqlite3` > command. If you unzipped the SQLite download to a new folder called 'sqlite' on > your `C:` drive per the instructions, use the following command:
 > ~~~
 > > cd C:\sqlite
 > > sqlite3 C:\Desktop\survey.db 
 > ~~~
-> *filepath depends on where your survey.db is saved*
 > {: .source}
+> *filepath depends on where your survey.db is saved*
 > The SQLite command is `sqlite3` and you are telling SQLite to open up
 > the `survey.db`.  You need to specify the `.db` file otherwise, SQLite
 > will open up a temporary, empty database.
