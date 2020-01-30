@@ -71,17 +71,43 @@ is an unending portability headache.
 When we create a table,
 we can specify several kinds of constraints on its columns.
 For example,
-a better definition for the `Survey` table would be:
+better definitions for the tables would be:
 
 ~~~
-CREATE TABLE Survey(
-    taken   integer not null, -- where reading taken
-    person  text,             -- may not know who took it
-    quant   text not null,    -- the quantity measured
-    reading real not null,    -- the actual reading
-    primary key(taken, quant),
-    foreign key(taken) references Visited(id),
-    foreign key(person) references Person(id)
+CREATE TABLE person (
+  id TEXT,
+  personal TEXT NOT NULL,
+  family TEXT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE site (
+  name TEXT,
+  lat REAL NOT NULL,
+  long REAL NOT NULL,
+  PRIMARY KEY (name),
+  CHECK (lat >= -90 AND lat <= 90),
+  CHECK (long >= -180 AND long <= 180),
+  UNIQUE (lat, long)
+);
+
+CREATE TABLE visited (
+  id INTEGER,
+  site TEXT NOT NULL,
+  dated TEXT, -- use DATE in other database systems
+  PRIMARY KEY (id),
+  FOREIGN KEY (site) REFERENCES site(name)
+);
+
+CREATE TABLE survey (
+  taken INTEGER NOT NULL,
+  person TEXT, -- may be NULL if not person not known
+  quant TEXT NOT NULL,
+  reading REAL,
+  PRIMARY KEY (taken, quant),
+  FOREIGN KEY (taken) REFERENCES visited(id),
+  FOREIGN KEY (person) REFERENCES person(id),
+  CHECK (quant = 'rad' OR quant = 'sal' OR quant = 'temp')
 );
 ~~~
 {: .sql}
