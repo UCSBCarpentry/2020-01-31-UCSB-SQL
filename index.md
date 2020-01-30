@@ -348,6 +348,6 @@ href="http://sqlitebrowser.org/">DB Browser for SQLite</a>.</li>
 
 <p>Data:</p>
 <ul>
-<li>Please download the database we will use: <a href="files/survey.db">survey.db</a>.</li>
+<li>Please download the database we will use: <a class="btn btn-info" href="files/survey.db">survey.db</a>.</li>
 </ul>
 
