@@ -74,6 +74,7 @@ but that handful accounts for most of what scientists do.
 > ~~~
 > > cd C:\sqlite
 > > sqlite3
+> > .open C:/Desktop/survey.db
 > ~~~
 > {: .source}
 {: .callout}
@@ -167,7 +168,15 @@ we'll return to these missing values [later]({{ site.github.url }}/05-null/).
 > survey.db
 > ~~~
 > {: .output}
->
+> ~~~
+> cd Desktop
+> dir | findstr survey.db
+> ~~~
+> {: .source}
+> ~~~
+> 01/10/2020 03:12 PM         6,144 survey.db
+> ~~~
+> {: .output}
 > If you get the same output, you can run
 >
 > ~~~
