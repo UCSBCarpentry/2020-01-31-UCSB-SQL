@@ -60,6 +60,15 @@ but that handful accounts for most of what scientists do.
 > ~~~
 > {: .bash}
 >
+> **Windows** To get into SQLite with the Windows command prompt either double-click your sqlite.exe file which will automatically open SQLite in 
+> the command prompt or open the command prompt, navigate to the folder where the .exe file is saved (cd) and use command 'sqlite3'. If 
+> you unzipped the SQLite download to a new folder called 'sqlite' on your C: drive per the instructions, use the following command:
+> ~~~
+> > cd C:\sqlite
+> > sqlite3 C:\Desktop\survey.db 
+> ~~~
+> *filepath depends on where your survey.db is saved*
+> {: .source}
 > The SQLite command is `sqlite3` and you are telling SQLite to open up
 > the `survey.db`.  You need to specify the `.db` file otherwise, SQLite
 > will open up a temporary, empty database.
@@ -67,16 +76,6 @@ but that handful accounts for most of what scientists do.
 > To get out of SQLite, type out `.exit` or `.quit`.  For some
 > terminals, `Ctrl-D` can also work.  If you forget any SQLite `.` (dot)
 > command, type `.help`.
->
-> To get into SQLite with the Windows command prompt either double-click your sqlite.exe file which will automatically open SQLite in 
-> the command prompt or open the command prompt, navigate to the folder where the .exe file is saved (cd) and use command 'sqlite3'. If 
-> you unzipped the SQLite download to a new folder called 'sqlite' on your C: drive per the instructions, use the following command:
-> ~~~
-> > cd C:\sqlite
-> > sqlite3
-> > .open C:/Desktop/survey.db
-> ~~~
-> {: .source}
 {: .callout}
 
 Before we get into using SQLite to select the data, let's take a look at the tables of the database we will use in our examples:
@@ -168,6 +167,8 @@ we'll return to these missing values [later]({{ site.github.url }}/05-null/).
 > survey.db
 > ~~~
 > {: .output}
+> For Windows prompt users you can do the same with the following code, though 
+> you'll receive back a bit more information than grep in Bash.
 > ~~~
 > cd Desktop
 > dir | findstr survey.db
