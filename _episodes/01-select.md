@@ -67,6 +67,14 @@ but that handful accounts for most of what scientists do.
 > To get out of SQLite, type out `.exit` or `.quit`.  For some
 > terminals, `Ctrl-D` can also work.  If you forget any SQLite `.` (dot)
 > command, type `.help`.
+
+> To get into SQLite with the Windows command prompt either double-click your sqlite.exe file which will automatically open SQLite in 
+> the command prompt or open the command prompt, navigate to the folder where the .exe file is saved (cd) and use command 'sqlite3'. If 
+> you unzipped the SQLite download to a new folder called 'sqlite' on your C: drive per the instructions, use the following command:
+> ~~~
+> > cd C:\sqlite
+> > sqlite3
+> ~~~
 {: .callout}
 
 Before we get into using SQLite to select the data, let's take a look at the tables of the database we will use in our examples:
