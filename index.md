@@ -340,7 +340,7 @@ please preview your site before committing, and make sure to run
 your system.  (You can tell if SQLite3 is installed if the "sqlite3"
 command is in your path.)
 
-<p> __Windows Users:__ follow <a class="btn btn-info" href="https://www.sqlitetutorial.net/download-install-sqlite/">these instructions to use SQLite from the command prompt.</a></p>
+<p> <em>Windows Users:<em> follow <a class="btn btn-info" href="https://www.sqlitetutorial.net/download-install-sqlite/">these instructions to use SQLite from the command prompt.</a></p>
 </li>
 
 <li>For a standalone graphical application, install <a
