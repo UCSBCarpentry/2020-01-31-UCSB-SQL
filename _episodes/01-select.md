@@ -68,7 +68,6 @@ but that handful accounts for most of what scientists do.
 > > sqlite3 C:\Desktop\survey.db 
 > ~~~
 > {: .source}
-> *filepath depends on where your survey.db is saved*
 > The SQLite command is `sqlite3` and you are telling SQLite to open up
 > the `survey.db`.  You need to specify the `.db` file otherwise, SQLite
 > will open up a temporary, empty database.
@@ -170,8 +169,8 @@ we'll return to these missing values [later]({{ site.github.url }}/05-null/).
 > For Windows prompt users you can do the same with the following code, though 
 > you'll receive back a bit more information than grep in Bash.
 > ~~~
-> cd Desktop
-> dir | findstr survey.db
+> > cd Desktop
+> > dir | findstr survey.db
 > ~~~
 > {: .source}
 > ~~~
