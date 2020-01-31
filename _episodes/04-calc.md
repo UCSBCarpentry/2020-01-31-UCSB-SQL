@@ -162,3 +162,36 @@ SELECT personal || ' ' || family FROM Person;
 > {: .solution}
 {: .challenge}
 
+> ## Selecting Major Site Identifiers
+>
+> The site identifiers in the `Visited` table have two parts
+> separated by a '-':
+>
+> ~~~
+> SELECT DISTINCT site FROM Visited;
+> ~~~
+> {: .sql}
+>
+> |site |
+> |-----|
+> |DR-1 |
+> |DR-3 |
+> |MSK-4|
+>
+> Some major site identifiers (i.e. the letter codes) are two letters long and some are three.
+> The "in string" function `instr(X, Y)`
+> returns the 1-based index of the first occurrence of string Y in string X,
+> or 0 if Y does not exist in X.
+> The substring function `substr(X, I, [L])`
+> returns the substring of X starting at index I, with an optional length L.
+> Use these two functions to produce a list of unique major site identifiers.
+> (For this data,
+> the list should contain only "DR" and "MSK").
+>
+> > ## Solution
+> > ```
+> > SELECT DISTINCT substr(site, 1, instr(site, '-') - 1) AS MajorSite FROM Visited;
+> > ```
+> > {: .sql}
+> {: .solution}
+{: .challenge}
